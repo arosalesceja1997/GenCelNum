@@ -47,7 +47,6 @@ function aleatorio(rang){
 
 document.addEventListener("DOMContentLoaded", function(event) { 
     var select = document.getElementById("Ladas"); //Seleccionamos el select 23
-    
     for(var i=0; i < provincias.length; i++){ 
         var option = document.createElement("option"); //Creamos la opcion
         option.innerHTML = provincias[i]; //Metemos el texto en la opción
@@ -65,4 +64,10 @@ function ShowSelected(){
     //var combo = document.getElementById("Ladas");
     // var selected = combo.options[combo.selectedIndex].text;
     // alert(selected);
+}
+
+//SOLO NUMEROS
+function soloNumeros(e){
+	var key = window.Event ? e.which : e.keyCode
+	return ((key >= 48 && key <= 57) || (key==8))
 }

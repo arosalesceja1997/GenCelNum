@@ -19,10 +19,10 @@
             <div class="col"></div>
             <div class="col-sm-12 col-md-8 col-lg-6">
                 <div class="form-group mt-5">
-                    <label for="numero" class="">Tamaño: </label>
-                    <input type="number" class="form-control" id="numero" min="0" max="1000" maxlength="4" value="0">
+                    <label for="numero" class="">Monto a generar: </label>
+                    <input type="number" class="form-control validar" id="numero" min="0" max="1000" maxlength="4" value="0" onKeyPress="return soloNumeros(event)">
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="display: none;">
                     <label for="Ladas">Lada:</label>
                     <select class="form-control" id="Ladas" onchange="ShowSelected();">
                     </select>
@@ -38,13 +38,13 @@
                         <div class="col"></div>
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-5">
                     <label for="txt">
-                        Resultado:
+                        Lista de numeros activos(70%):
                     </label>
-                    <textarea class="form-control text-center mb-5" id="txt" rows="9"></textarea>
-                    <a href="#" id="link" download="contenido.txt">
-                        Descargar text
+                    <textarea class="form-control text-center" id="txt" rows="9" readonly></textarea>
+                    <a href="#" id="link" download="contenido.txt" class="mb-5">
+                        Descargar Archivo .txt
                     </a> 
                 </div>           
             </div>
@@ -53,7 +53,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="page-footer font-small bg-secondar">
+    <footer class="page-footer font-small bg-secondar mt-5">
         <nav class="fixed-bottom navbar-light bg-light text-center py-3">
             © 2020 Copyright by
             <a href=""> Anthony</a>
