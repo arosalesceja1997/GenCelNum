@@ -13,6 +13,7 @@ function celNumbers() {
     let cant = document.getElementById('numero').value;
     var txt = document.getElementById('txt');
     var numeros = []; 
+    txt.value = "";
 
     for(let x = 0; x < cant; x++){
         numeros[x] = "9";
@@ -24,7 +25,7 @@ function celNumbers() {
 }
 
 
-function aleatorio(){
+function aleatorio(rang){
     var numPosibilidades = 9;
     var aleat = Math.random() * numPosibilidades;
     aleat = Math.round(aleat);
