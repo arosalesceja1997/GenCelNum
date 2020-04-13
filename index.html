@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <title>Document</title>
 </head>
 <body onLoad="cargar()">
     <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">Generador de numeros</a>
+        <a class="navbar-brand" href="#">Generador de números</a>
     </nav>
-    
+    <div class="opacy">
+    </div>
+
     <div class="container-lg">
         <div class="row">
             <div class="col-12"></div>
@@ -19,7 +22,7 @@
             <div class="col"></div>
             <div class="col-sm-12 col-md-8 col-lg-6">
                 <div class="form-group mt-5">
-                    <label for="numero" class="">Monto a generar: </label>
+                    <label for="numero" class="letter">Monto a generar: </label>
                     <input type="number" class="form-control validar" id="numero" min="0" max="1000" maxlength="4" value="0" onKeyPress="return soloNumeros(event)">
                 </div>
                 <div class="form-group" style="display: none;">
@@ -32,18 +35,18 @@
                         <div class="col"></div>
                         <div class="col-sm-12 col-md-8 col-lg-6">
                             <a class="btn btn-primary mb-2" style="width: 100% !important;" href='javascript:;' onclick="celNumbers(document.getElementById('numero'));" role="button">
-                                Generar numeros
+                                Generar
                             </a>
                         </div>
                         <div class="col"></div>
                     </div>
                 </div>
                 <div class="form-group mb-5">
-                    <label for="txt">
+                    <label for="txt" class="letter">
                         Lista de numeros activos(70%):
                     </label>
                     <textarea class="form-control text-center" id="txt" rows="9" readonly></textarea>
-                    <a href="#" id="link" download="contenido.txt" class="mb-5">
+                    <a href="#" id="link" download="contenido.txt" class="mb-5 letter">
                         Descargar Archivo .txt
                     </a> 
                 </div>           
