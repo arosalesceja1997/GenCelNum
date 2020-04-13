@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body onLoad="cargar()">
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">Generador de numeros</a>
+    </nav>
+    
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-12"></div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-sm-12 col-md-8 col-lg-6">
+                <div class="form-group mt-5">
+                    <label for="numero" class="">Tamaño: </label>
+                    <input type="number" class="form-control" id="numero" min="0" max="1000" maxlength="4" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="Ladas">Ladas:</label>
+                    <select class="form-control" id="Ladas" onchange="ShowSelected();">
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col-sm-12 col-md-8 col-lg-6">
+                            <a class="btn btn-primary mb-2" style="width: 100% !important;" href='javascript:;' onclick="celNumbers(document.getElementById('numero'));" role="button">
+                                Generar numeros
+                            </a>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="txt">
+                        Resultado:
+                    </label>
+                    <textarea class="form-control text-center" id="txt" rows="3"></textarea>
+                    <a href="#" id="link" download="contenido.txt">
+                        Descargar text
+                    </a> 
+                </div>           
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small bg-secondar">
+        <nav class="fixed-bottom navbar-light bg-light text-center py-3">
+            © 2020 Copyright:
+            <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+        </nav>
+    </footer>
+    <!-- Footer -->
+
+    <script src="index.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<!--https://apilayer.net/api/validate
+http://apilayer.net/api/validate?access_key=2d39bfc8bfc7d4f06fcd4ec16fc5fe1c&number=14158586273&country_code=PE&format=1
+-->
