@@ -58,8 +58,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function ShowSelected(){
     /* Para obtener el valor */
-    var cod = document.getElementById("Ladas").value;
-    alert(cod);
+    var code = document.getElementById("Ladas").value;
+    alert(code);
     
     /* Para obtener el texto */
     //var combo = document.getElementById("Ladas");
