@@ -1,7 +1,19 @@
-function numCel() {
-    alert("Hola mundo");
-}
+let provincias = 
+[
+    "Amazonas", "Ancash", "Apurimac", "Arequipa", "Ayacucho", "Cajamarca",
+    "Cusco", "Huancavelica", "Huanuco", "Ica", "Junín", "La Libertad",
+    "Lambayeque", "Loreto", "Madre de Dios", "Moquegua", "Pasco", "Piura",
+    "Puno", "San Martín", "Tacna", "Tumbes", "Ucayali"
+];
 
+let lada = [
+    "41", "43", "83", "54", "66", "76",
+    "84", "67", "62", "56", "64", "44",
+    "74", "65", "82", "53", "63", "73",
+    "51", "51", "52", "72", "61"
+];
+
+// Funcion para descargar un archivo en .txt
 window.onload = function() {
     document.getElementById('link').onclick = function(code) {
         this.href = 'data:text/plain;charset=utf-8,'
@@ -9,16 +21,17 @@ window.onload = function() {
     };
 };
 
+// Funcion para generar los numeros con una lada aleateoria pero correcta
 function celNumbers() {
     let cant = document.getElementById('numero').value;
     var txt = document.getElementById('txt');
-    var numeros = []; 
+    var numeros = [];
     txt.value = "";
 
     for(let x = 0; x < cant; x++){
-        numeros[x] = "9";
-        for(let y = 0; y < 8; y++){
-            numeros[x] += "" + aleatorio();
+        numeros[x] = "9" + lada[aleatorio(22)];
+        for(let y = 0; y < 6; y++){
+            numeros[x] += "" + aleatorio(9);
         }
         txt.value += numeros[x] + "\n";
     }
@@ -26,28 +39,14 @@ function celNumbers() {
 
 
 function aleatorio(rang){
-    var numPosibilidades = 9;
+    var numPosibilidades = rang;
     var aleat = Math.random() * numPosibilidades;
     aleat = Math.round(aleat);
     return parseInt(0) + aleat;
 }
 
 document.addEventListener("DOMContentLoaded", function(event) { 
-    let provincias = 
-    [
-        "Amazonas", "Ancash", "Apurimac", "Arequipa", "Ayacucho", "Cajamarca",
-        "Cusco", "Huancavelica", "Huanuco", "Ica", "Junín", "La Libertad",
-        "Lambayeque", "Loreto", "Madre de Dios", "Moquegua", "Pasco", "Piura",
-        "Puno", "San Martín", "Tacna", "Tumbes", "Ucayali"
-    ];
-    
-    let lada = [
-        "41", "43", "83", "54", "66", "76",
-        "84", "67", "62", "56", "64", "44",
-        "74", "65", "82", "53", "63", "73",
-        "51", "51", "52", "72", "61"
-    ];
-    var select = document.getElementById("Ladas"); //Seleccionamos el select
+    var select = document.getElementById("Ladas"); //Seleccionamos el select 23
     
     for(var i=0; i < provincias.length; i++){ 
         var option = document.createElement("option"); //Creamos la opcion
